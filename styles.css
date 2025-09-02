@@ -1,0 +1,140 @@
+/* Navbar Styling */
+.navbar {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: linear-gradient(135deg, #a97bd3, #7b5cd3);
+    /* Purple theme */
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffd369;
+    /* Golden hover effect */
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 110vh;
+    background-image: linear-gradient(20deg, #A683E3 41%, #E4E9FD 59%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.date-box {
+    margin-top: 40px;
+    background: #a084dc;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.todo-container {
+    margin-top: 30px;
+    background: #E4E9FD;
+    border: 5px solid #A683E3;
+    /* purple border for light background */
+    border-radius: 12px;
+    box-shadow: 0 0 0 5px #E4E9FD;
+    /* outer "inverted" border for purple bg */
+    width: 350px;
+    padding: 20px;
+    position: relative;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #A683E3;
+    /* modern browsers */
+    cursor: pointer;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.new-item {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.new-item input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-btn {
+    background: #a084dc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.add-btn:hover {
+    background: #7a61c9;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: gray;
+}

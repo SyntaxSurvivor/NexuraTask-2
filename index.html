@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">✨ To-Do App</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="date-box" id="dateBox"></div>
+
+    <div class="todo-container" id="todoContainer">
+        <div class="todo-item"><input type="checkbox"> <span>Drink 2 liters of water</span></div>
+        <div class="todo-item"><input type="checkbox"> <span>Read 10 pages of a book</span></div>
+        <div class="todo-item"><input type="checkbox"> <span>Do 20 push-ups</span></div>
+        <div class="todo-item"><input type="checkbox"> <span>Learn one new English word</span></div>
+        <div class="todo-item"><input type="checkbox"> <span>Meditate for 5 minutes</span></div>
+        <div class="todo-item"><input type="checkbox"> <span>Write down 3 things I’m grateful for</span></div>
+        <div class="todo-item"><input type="checkbox"> <span>Revise yesterday’s notes</span></div>
+        <div class="todo-item"><input type="checkbox"> <span>Clean up workspace</span></div>
+        <div class="todo-item"><input type="checkbox"> <span>Plan tomorrow’s schedule</span></div>
+
+        <div class="new-item">
+            <input type="text" id="newTask" placeholder="New Item">
+            <button class="add-btn" onclick="addTask()">+</button>
+        </div>
+    </div>
+
+    <footer style="color: #ffffff ;">Copyright 2025 Siddharth Sharma<br>UIT-RGPV CSE</footer>
+
+    <script>
+        // Show current date
+        const dateBox = document.getElementById("dateBox");
+        const today = new Date();
+        const options = { weekday: "long", month: "long", day: "numeric" };
+        dateBox.textContent = today.toLocaleDateString("en-US", options);
+
+        const container = document.getElementById("todoContainer");
+
+        // Toggle completed class when checkbox is clicked
+        container.addEventListener("change", function (e) {
+            if (e.target.type === "checkbox") {
+                const parent = e.target.parentElement;
+                parent.classList.toggle("completed", e.target.checked);
+            }
+        });
+
+        // Add new task
+        function addTask() {
+            const taskInput = document.getElementById("newTask");
+            const taskValue = taskInput.value.trim();
+            if (taskValue === "") return;
+
+            const newDiv = document.createElement("div");
+            newDiv.classList.add("todo-item");
+            newDiv.innerHTML = `<input type="checkbox"> <span>${taskValue}</span>`;
+            container.insertBefore(newDiv, document.querySelector(".new-item"));
+
+            taskInput.value = "";
+        }
+    </script>
+</body>
+
+</html>
