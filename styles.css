@@ -67,10 +67,8 @@ body {
     margin-top: 30px;
     background: #E4E9FD;
     border: 5px solid #A683E3;
-    /* purple border for light background */
     border-radius: 12px;
     box-shadow: 0 0 0 5px #E4E9FD;
-    /* outer "inverted" border for purple bg */
     width: 350px;
     padding: 20px;
     position: relative;
@@ -88,7 +86,6 @@ body {
     width: 18px;
     height: 18px;
     accent-color: #A683E3;
-    /* modern browsers */
     cursor: pointer;
 }
 
